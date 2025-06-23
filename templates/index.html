@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Sales Predictor</title>
+</head>
+<body>
+    <h2>Store Sales Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="ads">Ads on Social Media (units):</label>
+        <input type="number" step="0.1" name="ads" required><br><br>
+
+        <label for="products">Number of Products Displayed:</label>
+        <input type="number" step="1" name="products" required><br><br>
+
+        <label for="customers">Daily Customers:</label>
+        <input type="number" step="1" name="customers" required><br><br>
+
+        <input type="submit" value="Predict Sales">
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
